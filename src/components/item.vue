@@ -1,17 +1,16 @@
 <template>
-  <section class="range">
-    range
+  <section class="items">
+    item
   </section>
 </template>
 
 <script>
   export default {
-    name: 'Range',
+    name: 'Item',
     data () {
       return {}
     },
-    methods: {
-    }
+    methods: {}
   }
 </script>
 

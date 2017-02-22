@@ -15,10 +15,17 @@
            class="filters-block__range"
            v-on:change-value="onDistanceChange"
     ></range>
+    <button type="button" v-on:click="onPriceChange(1000)">Demo</button>
   </section>
 </template>
 
 <script>
+  import {
+    mapActions,
+    mapGetters
+  } from 'vuex'
+
+  import searchVuex from 'src/vuex/modules/views/search'
 
   import Range from './range'
 
@@ -28,15 +35,30 @@
       return {}
     },
     methods: {
-      onPriceChange (){
+      onPriceChange (val) {
         // TODO (S.Panfilov)
+        console.info(val)                                  // SEARCH_VIEW/STATE/SET_MAX_PRICE
+        console.info(searchVuex.types.STATE.MAX_PRICE.SET) // SEARCH_VIEW/STATE/SET_MAX_PRICE
+        this.setMaxPrice(val)
       },
-      onRatingChange (){
+      onRatingChange (val) {
         // TODO (S.Panfilov)
+        this.setMinRating(val)
       },
-      onDistanceChange (){
+      onDistanceChange (val) {
         // TODO (S.Panfilov)
-      }
+        this.setDistance(val)
+      },
+      ...mapActions({
+        setMaxPrice: searchVuex.types.STATE.MAX_PRICE.SET,
+        setMinRating: searchVuex.types.STATE.MIN_RATING.SET,
+        setDistance: searchVuex.types.STATE.DISTANCE.SET
+      }),
+      ...mapGetters({
+        getMaxPrice: searchVuex.types.STATE.MAX_PRICE.GET,
+        getMinRating: searchVuex.types.STATE.MIN_RATING.GET,
+        getDistance: searchVuex.types.STATE.DISTANCE.GET
+      })
     },
     components: {
       Range

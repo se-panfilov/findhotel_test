@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <main-header class="header"></main-header>
-    <hello></hello>
+    <search-page></search-page>
   </div>
 </template>
 
 <script>
-import MainHeader from './components/main-header'
-import SearchPage from './components/search-page'
+  import MainHeader from './components/main-header'
+  import SearchPage from './views/search'
 
-// TODO (S.Panfilov) font-awesome
-// TODO (S.Panfilov) roboto
+  // TODO (S.Panfilov) font-awesome
+  // TODO (S.Panfilov) roboto
 
-export default {
-  name: 'app',
-  components: {
-    SearchPage,
-    MainHeader
+  export default {
+    name: 'app',
+    components: {
+      SearchPage,
+      MainHeader
+    }
   }
-}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
