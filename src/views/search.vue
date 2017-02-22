@@ -10,11 +10,31 @@
   import FiltersBlock from 'src/components/filters-block'
   import SortingBlock from 'src/components/sorting-block'
   import ItemsList from 'src/components/items-list'
+  import data from 'src/data/data'
+
+  import {
+    mapActions
+  } from 'vuex'
+
+  import searchVuex from 'src/vuex/modules/views/search'
 
   export default {
     name: 'SearchPage',
     data () {
       return {}
+    },
+    mounted () {
+      this.setList(this.getData())
+    },
+    methods: {
+      getData () {
+        // this is a Pretend of a "fetch data from server"
+        // Normally it's gonna be a request to api
+        return data
+      },
+      ...mapActions({
+        setList: searchVuex.types.STATE.LIST.SET
+      })
     },
     components: {
       FiltersBlock,

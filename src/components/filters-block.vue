@@ -36,17 +36,12 @@
     },
     methods: {
       onPriceChange (val) {
-        // TODO (S.Panfilov)
-        console.info(val)                                  // SEARCH_VIEW/STATE/SET_MAX_PRICE
-        console.info(searchVuex.types.STATE.MAX_PRICE.SET) // SEARCH_VIEW/STATE/SET_MAX_PRICE
         this.setMaxPrice(val)
       },
       onRatingChange (val) {
-        // TODO (S.Panfilov)
         this.setMinRating(val)
       },
       onDistanceChange (val) {
-        // TODO (S.Panfilov)
         this.setDistance(val)
       },
       ...mapActions({

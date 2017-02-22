@@ -1,6 +1,6 @@
 <template>
   <section class="items-list">
-    <div class="items-list__item-container" v-for="item in getItemsList">
+    <div class="items-list__item-container" v-for="item in getItemsList()">
       <item class="items-list__container"
             :item="item"
       ></item>
