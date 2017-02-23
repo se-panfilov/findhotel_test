@@ -3,8 +3,8 @@
     <div class="item__container">
       <section class="item__block -left -relative">
         <div class="item__img-buttons">
-          <!--<div class="item__label -left great-offer">Great Offer</div>-->
-          <!--<div class="item__label -right">Like</div>-->
+          <div class="item__label -left great-offer">Great Offer</div>
+          <div class="item__label -right">Like</div>
         </div>
         <img :src="item.images[0].small" :alt="item.name" class="item__img"/>
       </section>
@@ -21,7 +21,9 @@
       </section>
       <section class="item__block -right">
         <offers-block :offers="item.offers"></offers-block>
-        <button class="item__btn -link -small">Show details</button>
+        <div class="-centered">
+          <button class="item__btn -link -small">Show details</button>
+        </div>
       </section>
     </div>
   </section>
@@ -76,20 +78,22 @@
         background-color green
         flex-grow 3
       &.-right
-        background-color blue
+        border 1px solid transparent
+        border-left-color black
+        // background-color blue
 
     &__img
       z-index 4
 
     &__img-buttons
-      position absolute
+    //position absolute
       left: 0
       right 0
       top 0
       z-index 5
 
     &__label
-      //position absolute
+    //position absolute
       font-size 0.7em
       z-index 6
       &.-left
@@ -99,5 +103,18 @@
       &.great-offer
         background-color secondary_color
         color white
+
+    .-centered
+      text-align center
+
+    &__btn
+      &.-link
+        font-weight 700
+        border 0
+        background none
+        outline none
+        cursor pointer
+        &:hover
+          text-decoration underline
 
 </style>
