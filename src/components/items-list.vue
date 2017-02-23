@@ -3,6 +3,7 @@
     <item class="items-list__item"
           v-for="item in getItemsList()"
           :item="item"
+          v-on:on-like="onLike"
     ></item>
   </section>
 </template>
@@ -22,6 +23,9 @@
       return {}
     },
     methods: {
+      onLike (item, isLike) {
+        this.$emit('on-like', item, isLike)
+      },
       ...mapGetters({
         getItemsList: searchVuex.types.STATE.LIST.GET
       })

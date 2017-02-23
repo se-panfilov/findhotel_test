@@ -15,6 +15,9 @@ const actions = {
   },
   [TYPES.STATE.LIST.ADD]: ({commit}, item) => {
     commit(TYPES.STATE.LIST.ADD, item)
+  },
+  [TYPES.STATE.ITEM_LIKE.SET]: ({commit}, {item, isLike}) => {
+    commit(TYPES.STATE.ITEM_LIKE.SET, {item, isLike})
   }
 }
 

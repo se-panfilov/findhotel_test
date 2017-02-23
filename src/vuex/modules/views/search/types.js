@@ -10,26 +10,24 @@ function getFieldStr (prefix, action, propertyName) {
   return (`${prefix}/STATE/${action}_${propertyName}`)
 }
 
-const TYPES = {
-  STATE: {
-    MAX_PRICE: {
-      SET: getFieldStr(prefix, ACTIONS.SET, 'MAX_PRICE'),
-      GET: getFieldStr(prefix, ACTIONS.GET, 'MAX_PRICE')
-    },
-    MIN_RATING: {
-      SET: getFieldStr(prefix, ACTIONS.SET, 'MIN_RATING'),
-      GET: getFieldStr(prefix, ACTIONS.GET, 'MIN_RATING')
-    },
-    DISTANCE: {
-      SET: getFieldStr(prefix, ACTIONS.SET, 'DISTANCE'),
-      GET: getFieldStr(prefix, ACTIONS.GET, 'DISTANCE')
-    },
-    LIST: {
-      SET: getFieldStr(prefix, ACTIONS.SET, 'LIST'),
-      ADD: getFieldStr(prefix, ACTIONS.ADD, 'LIST'),
-      GET: getFieldStr(prefix, ACTIONS.GET, 'LIST')
-    }
-  }
+const TYPES = {}
+
+function addType (name, type) {
+  TYPES.STATE = TYPES.STATE || {}
+  TYPES.STATE[name] = TYPES.STATE[name] || {}
+  TYPES.STATE[name][type] = TYPES.STATE[name][type] || {}
+  TYPES.STATE[name][type] = getFieldStr(prefix, type, name)
 }
+
+addType('MAX_PRICE', ACTIONS.SET)
+addType('MAX_PRICE', ACTIONS.GET)
+addType('MIN_RATING', ACTIONS.SET)
+addType('MIN_RATING', ACTIONS.GET)
+addType('DISTANCE', ACTIONS.SET)
+addType('DISTANCE', ACTIONS.GET)
+addType('LIST', ACTIONS.SET)
+addType('LIST', ACTIONS.ADD)
+addType('LIST', ACTIONS.GET)
+addType('ITEM_LIKE', ACTIONS.SET)
 
 export default TYPES

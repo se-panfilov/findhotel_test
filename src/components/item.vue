@@ -3,8 +3,12 @@
     <div class="item__container">
       <section class="item__block item__image -left -relative" :style="bgImg">
         <div class="item__img-buttons">
-          <div class="item__label -left great-offer">Great Offer</div>
-          <div class="item__label -right">Like</div>
+          <div class="item__label -great-offer">Great Offer</div>
+          <div class="item__label">
+            <button type="button" class="item__btn -label-btn -invisible" v-on:click="toggleLike(item)">
+              <i class="fa" :class="{'fa-heart-o': !item.isLike, 'fa-heart': item.isLike}"></i>
+            </button>
+          </div>
         </div>
         <!--<img :src="item.images[0].small" :alt="item.name" class="item__img"/>-->
       </section>
@@ -63,7 +67,11 @@
         required: true
       }
     },
-    methods: {},
+    methods: {
+      toggleLike (item) {
+        this.$emit('on-like', item, !item.isLike)
+      }
+    },
     computed: {
       bgImg () {
         return `background-image:url(${this.item.images[0].large})`
@@ -82,12 +90,14 @@
 
   .item
     background-color white
-    border-radius 3px
+    border-radius 5px
+    border 0
 
     &__container
       display flex
       justify-content center
       flex-direction row
+      border 0
 
     &__block
       flex-basis 200px
@@ -95,19 +105,24 @@
       border 1px solid transparent
       &.-left
         border-right-color #f2f2f2
+        border-top-left-radius 8px
+        border-bottom-left-radius 8px
       &.-center
         flex-grow 3
       &.-right
         border-left-color #f2f2f2
+        border-top-right-radius 8px
+        border-bottom-right-radius 8px
 
     &__img
       z-index 4
 
     &__img-buttons
-      left: 0
-      right 0
-      top 0
       z-index 5
+      display flex
+      justify-content space-between
+      padding 5px
+      color white
 
     &__distance
       color main_color
@@ -126,6 +141,8 @@
       background-repeat no-repeat
       background-position center
       background-size 100% 100%
+      border-top-left-radius 5px
+      border-bottom-left-radius 5px
 
     &__name
       font-size 1.2em
@@ -144,20 +161,50 @@
       font-size 0.9em
 
     &__label
-      font-size 0.7em
+      font-size 1em
       z-index 6
-      &.-left
-        left 0
-      &.-right
-        right 0
-      &.great-offer
-        background-color secondary_color
+      &.-great-offer
+        height 19px
         color white
+        position relative
+        background secondary_color
+        border 1px solid secondary_color
+        &:after, &:before
+          left 100%
+          top 50%
+          border solid transparent
+          content " "
+          height 0
+          width 0
+          position absolute
+          pointer-events none
+        &:after
+          border-color transparent
+          border-left-color secondary_color
+          border-width 5px
+          margin-top -5px
+        &:before
+          border-color transparent
+          border-left-color secondary_color
+          border-width 11px
+          margin-top -11px
+
+    .-label-btn
+      font-size 2em
+      color white
+      font-weight 700
+      font-style bold
 
     .-centered
       text-align center
 
     &__btn
+      &.-invisible
+        border 0
+        background none
+        text-decoration none
+        outline none
+        cursor pointer
       &.-link
         font-weight 700
         border 0

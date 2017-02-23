@@ -2,7 +2,7 @@
   <section class="search-page">
     <filters-block></filters-block>
     <sorting-block></sorting-block>
-    <items-list class="search-page__list"></items-list>
+    <items-list class="search-page__list" v-on:on-like="setLike"></items-list>
   </section>
 </template>
 
@@ -27,12 +27,16 @@
       this.setList(this.getData())
     },
     methods: {
+      setLike (item, isLike) {
+        this.setLikeItem({item, isLike})
+      },
       getData () {
         // this is a Pretend of a "fetch data from server"
         // Normally it's gonna be a request to api
         return data
       },
       ...mapActions({
+        setLikeItem: searchVuex.types.STATE.ITEM_LIKE.SET,
         setList: searchVuex.types.STATE.LIST.SET
       })
     },

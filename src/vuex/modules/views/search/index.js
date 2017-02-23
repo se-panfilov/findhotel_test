@@ -26,6 +26,12 @@ const mutations = {
   },
   [types.STATE.LIST.ADD] (state, item) {
     state.current.list.push(item)
+  },
+  [types.STATE.ITEM_LIKE.SET] (state, {item, isLike}) {
+    const index = state.current.list.findIndex((elem, index, arr) => elem.name === item.name)
+    state.current.list[index].isLike = !!isLike
+    // Bad practice, cause 'JSON.parse' can affect dates
+    state.current.list = JSON.parse(JSON.stringify(state.current.list))
   }
 }
 

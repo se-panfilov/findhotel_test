@@ -38,7 +38,6 @@
         return this.offers.filter(v => v.isBest)[0]
       },
       topThreeOffers () {
-        console.info(this.offers.filter(v => !v.isBest).slice(0, 3))
         return this.offers.filter(v => !v.isBest).slice(0, 3)
       }
     }
@@ -99,6 +98,7 @@
     &__link
       text-decoration none
       color main_txt_color
+      cursor pointer
 
     &__link-txt
       color main_txt_color
