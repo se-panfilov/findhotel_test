@@ -52,5 +52,5 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   .search-page
     &__list
-      padding 15px
+      padding 3px 15px
 </style>

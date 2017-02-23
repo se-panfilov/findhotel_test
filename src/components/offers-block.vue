@@ -1,8 +1,14 @@
 <template>
   <section class="offers-block">
     <section class="offers-block__best-offer">
-      <div class="offers-block__old-price">€100</div>
-      <div class="offers-block__price">€99</div>
+      <div class="offers-block__old-price">
+        <i class="fa fa-euro offers-block__currency-char"></i>
+        <span class="offers-block__val">100</span>
+      </div>
+      <div class="offers-block__price">
+        <i class="fa fa-euro offers-block__currency-char"></i>
+        <span class="offers-block__val">100</span>
+      </div>
       <div class="offers-block__free-cancellation" v-if="bestOffer.hasFreeCancelation">Free cancellation</div>
       <div class="offers-block__btn-container">
         <button class="offers-block__btn -primary -big" v-text="bestOffer.provider.name"></button>

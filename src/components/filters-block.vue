@@ -1,20 +1,35 @@
 <template>
   <section class="filters-block">
-    <range icon="€"
-           label="Max price"
-           class="filters-block__range"
-           v-on:change-value="onPriceChange"
-    ></range>
-    <range icon="smile"
-           label="Min rating"
-           class="filters-block__range"
-           v-on:change-value="onRatingChange"
-    ></range>
-    <range icon="location"
-           label="Distance from city center"
-           class="filters-block__range"
-           v-on:change-value="onDistanceChange"
-    ></range>
+    <section class="filters-block__filter">
+      <h3 class="filters-block__header">
+        <i class="fa fa-euro filters-block__header-icon"></i>
+        <span class="filters-block__header-txt">Max Price</span>
+      </h3>
+      <range class="filters-block__range"
+             v-on:change-value="onPriceChange"
+      ></range>
+    </section>
+
+    <section class="filters-block__filter">
+      <h3 class="filters-block__header">
+        <i class="fa fa-smile-o  filters-block__header-icon"></i>
+        <span class="filters-block__header-txt">Min Rating</span>
+      </h3>
+      <range class="filters-block__range"
+             v-on:change-value="onRatingChange"
+      ></range>
+    </section>
+
+    <section class="filters-block__filter">
+      <h3 class="filters-block__header">
+        <i class="fa fa-location-arrow filters-block__header-icon"></i>
+        <span class="filters-block__header-txt">Distance from city center</span>
+      </h3>
+      <range class="filters-block__range"
+             v-on:change-value="onDistanceChange"
+      ></range>
+    </section>
+
   </section>
 </template>
 
@@ -66,8 +81,15 @@
     display flex
     justify-content center
     flex-direction row
-    &__range
+    &__filter
       flex 1
-      min-height 200px
-      padding 15px
+      padding 10px 35px
+    &__header-icon
+      color #66696e
+    &__header
+      font-size 1em
+      padding  20px 0
+      margin 0
+    &__range
+      padding 35px 0 20px 0
 </style>
