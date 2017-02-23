@@ -16,7 +16,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  main_color = #37a2d8
+  @import '../assets/variables.styl'
 
   .main-header
     background-color main_color

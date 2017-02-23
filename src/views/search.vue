@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <section class="search-page">
     <filters-block></filters-block>
     <sorting-block></sorting-block>
-    <items-list></items-list>
+    <items-list class="search-page__list"></items-list>
   </section>
 </template>
 
@@ -46,5 +46,7 @@
 
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-
+  .search-page
+    &__list
+      padding 15px
 </style>

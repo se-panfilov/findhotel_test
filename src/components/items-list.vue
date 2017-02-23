@@ -1,10 +1,9 @@
 <template>
   <section class="items-list">
-    <div class="items-list__item-container" v-for="item in getItemsList()">
-      <item class="items-list__container"
-            :item="item"
-      ></item>
-    </div>
+    <item class="items-list__item"
+          v-for="item in getItemsList()"
+          :item="item"
+    ></item>
   </section>
 </template>
 
@@ -34,5 +33,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-
+  .items-list
+    &__item
+      margin 15px 0
 </style>

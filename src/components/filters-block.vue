@@ -15,7 +15,6 @@
            class="filters-block__range"
            v-on:change-value="onDistanceChange"
     ></range>
-    <button type="button" v-on:click="onPriceChange(1000)">Demo</button>
   </section>
 </template>
 
@@ -62,13 +61,17 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  main_color = #37a2d8
 
-  .main-header
-    background-color main_color
-    padding 15px
-    &__label-txt
-      color white
-      font-size 1.2em
-      text-transform uppercase
+  .filters-block
+    display flex
+    justify-content center
+    flex-direction row
+    &__range
+      flex 1
+      min-height 200px
+      background-color deeppink
+      &:first-of-type
+        background-color orange
+      &:last-of-type
+        background-color aqua
 </style>

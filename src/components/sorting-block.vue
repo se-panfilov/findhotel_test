@@ -10,8 +10,10 @@
         </select>
       </label>
 
-      <div class="sorting__total-hotels"></div>
-      <div class="sorting__great-deals"></div>
+      <div class="sorting__info">hotels</div>
+      <div class="sorting__info">
+        <button type="button" class="sorting-info__btn">great deals</button>
+      </div>
     </form>
   </section>
 </template>
@@ -28,5 +30,16 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  .sorting
+    margin 15px
+    &__info
+      display inline-block
 
+  .sorting-info__btn
+    border 0
+    background transparent
+    outline none
+    cursor pointer
+    &:hover, &:active
+      text-decoration underline
 </style>
