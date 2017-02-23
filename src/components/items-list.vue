@@ -35,14 +35,12 @@
         const bestA = this.getBestOffer(a.offers)
         const bestB = this.getBestOffer(b.offers)
 
-        // here we pretend that 'totalRate' === price
-        return this.numberSort(bestA.totalRate, bestB.totalRate)
+        return this.numberSort(bestA.price, bestB.price)
       },
       sortByName (a, b) {
         return this.stringSort(a.name, b.name)
       },
       stringSort (a, b) {
-        console.info('string!!!')
         if (!a || !b) throw new Error('Strings must be passed')
         if (typeof a !== this.TYPES.string || typeof b !== this.TYPES.string) throw new Error('Invalid strings')
 
@@ -54,7 +52,6 @@
         return 0
       },
       numberSort (a, b) {
-        console.info('number!!!')
         if (!a || !b) throw new Error('Numbers must be passed')
         if (!Number.isFinite(a) || !Number.isFinite(b)) throw new Error('Invalid numbers')
 
@@ -65,20 +62,38 @@
       },
       ...mapGetters({
         getItemsList: searchVuex.types.STATE.LIST.GET,
-        getSorting: searchVuex.types.STATE.SORTING.GET
+        getSorting: searchVuex.types.STATE.SORTING.GET,
+        getMaxPrice: searchVuex.types.STATE.MAX_PRICE.GET,
+        getMinRating: searchVuex.types.STATE.MIN_RATING.GET,
+        getDistance: searchVuex.types.STATE.DISTANCE.GET
       })
     },
     computed: {
-      sortedList () {
+      filteredList () {
         const list = this.getItemsList()
+        const maxPrice = +this.getMaxPrice()
+        const minRating = +this.getMinRating()
+        const distance = +this.getDistance()
+
+        const result = list.filter(v => {
+          const bestOffer = this.getBestOffer(v.offers)
+          const isPriceOk = (+bestOffer.price <= maxPrice) || (maxPrice === 0)
+          const isRatingOk = (+v.guestVote >= minRating) || (minRating === 0)
+          const isDistanceOk = (+v.distance <= distance) || (distance === 0)
+
+          console.info(`bestOffer.price: ${bestOffer.price}, maxPrice: ${maxPrice}, bestOffer.price <= maxPrice: ${bestOffer.price <= maxPrice}`)
+          return isPriceOk && isRatingOk && isDistanceOk
+        })
+
+        this.$emit('on-filtered', result.length)
+        return result
+      },
+      sortedList () {
+        const list = this.filteredList
         const sorting = this.getSorting()
 
         let method = this.sortByName
-        console.info(sorting.type)
-        console.info(sorting.name)
         if (sorting.type === this.TYPES.number && sorting.name === 'price') method = this.sortByPrice
-//        const demo = list.sort(method.bind(this))[0]
-//        if (demo) console.info(demo.name)
         return list.sort(method.bind(this))
       }
     },

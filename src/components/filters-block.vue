@@ -6,6 +6,7 @@
         <span class="filters-block__header-txt">Max Price</span>
       </h3>
       <range class="filters-block__range"
+             :max="+600"
              v-on:change-value="onPriceChange"
       ></range>
     </section>
@@ -16,6 +17,7 @@
         <span class="filters-block__header-txt">Min Rating</span>
       </h3>
       <range class="filters-block__range"
+             :max="+10"
              v-on:change-value="onRatingChange"
       ></range>
     </section>
@@ -26,6 +28,7 @@
         <span class="filters-block__header-txt">Distance from city center</span>
       </h3>
       <range class="filters-block__range"
+             :max="+10000"
              v-on:change-value="onDistanceChange"
       ></range>
     </section>
@@ -50,13 +53,13 @@
     },
     methods: {
       onPriceChange (val) {
-        this.setMaxPrice(val)
+        this.setMaxPrice(+val)
       },
       onRatingChange (val) {
-        this.setMinRating(val)
+        this.setMinRating(+val)
       },
       onDistanceChange (val) {
-        this.setDistance(val)
+        this.setDistance(+val)
       },
       ...mapActions({
         setMaxPrice: searchVuex.types.STATE.MAX_PRICE.SET,

@@ -50,20 +50,16 @@
       },
       setStyle (event) {
         const min = this.min || 0
-        const max = this.min || 100
+        const max = this.max || 100
         const value = (event.target.value - min) / (max - min)
         const mainColor = '#37a2d8' // main_color
         const secondaryColor = '#d1d1d1'
-        // TODO (S.Panfilov) we have to recount to take real percents
         let labelPosition = this.getLabelPosition(event.target.value, max)
-//        if (labelPosition <= 10) labelPosition = 10
-//        if (labelPosition >= 90) labelPosition = 90
         this.labelStyle = `margin-left: ${labelPosition}%`
 
         this.style = `background-image: -webkit-gradient(linear, left top, right top, color-stop(${value}, ${mainColor}),  color-stop(${value}, ${secondaryColor}))`
       },
       onInput (event) {
-        this.val = event.target.value + ''
         this.setStyle(event)
         this.$emit('change-value', event.target.value)
       }

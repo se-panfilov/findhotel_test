@@ -22,7 +22,8 @@
           <div class="item__vertical-block">
             <div class="item__distance">
               <i class="fa fa-location-arrow"></i>
-              <span>120m form city center</span>
+              <span v-text="item.distance + 'm'"></span>
+              <span>  form city center</span>
             </div>
             <div class="item__quality">
               <guest-vote :rating="item.guestVote"></guest-vote>

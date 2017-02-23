@@ -1,8 +1,11 @@
 <template>
   <section class="search-page">
     <filters-block></filters-block>
-    <sorting-block></sorting-block>
-    <items-list class="search-page__list" v-on:on-like="setLike"></items-list>
+    <sorting-block :total="totalInList"></sorting-block>
+    <items-list class="search-page__list"
+                v-on:on-like="setLike"
+                v-on:on-filtered="onListFiltered"
+    ></items-list>
   </section>
 </template>
 
@@ -21,12 +24,17 @@
   export default {
     name: 'SearchPage',
     data () {
-      return {}
+      return {
+        totalInList: 0
+      }
     },
     mounted () {
       this.setList(this.getData())
     },
     methods: {
+      onListFiltered (val) {
+        this.totalInList = val
+      },
       setLike (item, isLike) {
         this.setLikeItem({item, isLike})
       },

@@ -4,6 +4,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Nieuwmarkt en Lastage, Amsterdam',
     'reviewCount': 11510,
+    'distance': 11510,
     'guestVote': 8.9,
     'images': [
       {
@@ -170,7 +171,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard + Breakfast',
-        'totalRate': 214
+        'totalRate': 214,
+        'price': 214
       },
       {
         'hasFreeCancelation': false,
@@ -184,7 +186,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Standard',
-        'totalRate': 247
+        'totalRate': 247,
+
+        'price': 247
       },
       {
         'hasFreeCancelation': false,
@@ -198,7 +202,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': '1 Queen Accessible Guestroom Special1',
-        'totalRate': 251
+        'totalRate': 251,
+
+        'price': 251
       },
       {
         'hasFreeCancelation': true,
@@ -212,7 +218,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'King Deluxe Room   Free Wi Fi Access   Book & Pay Later!   Free Cancellation',
-        'totalRate': 362
+        'totalRate': 362,
+
+        'price': 362
       },
       {
         'hasFreeCancelation': true,
@@ -228,7 +236,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Executive Queen Room With Access To Executive Lounge   Free Wi Fi',
-        'totalRate': 420
+        'totalRate': 420,
+
+        'price': 420
       }
     ]
   },
@@ -237,6 +247,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Burgwallen-Nieuwe Zijde, Amsterdam',
     'reviewCount': 15009,
+    'distance': 15009,
     'guestVote': 8.4,
     'images': [
       {
@@ -401,7 +412,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Executive Double Room   Non Refundable   Free Wi Fi',
-        'totalRate': 202
+        'totalRate': 202,
+
+        'price': 202
       },
       {
         'hasFreeCancelation': false,
@@ -415,7 +428,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Executive Tweepersoonskamer',
-        'totalRate': 203
+        'totalRate': 203,
+
+        'price': 203
       },
       {
         'hasFreeCancelation': false,
@@ -429,7 +444,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Room Executive',
-        'totalRate': 196
+        'totalRate': 196,
+
+        'price': 196
       },
       {
         'hasFreeCancelation': true,
@@ -443,7 +460,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Executive Double Room   Free Wi Fi',
-        'totalRate': 225
+        'totalRate': 225,
+
+        'price': 225
       },
       {
         'hasFreeCancelation': null,
@@ -459,7 +478,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Twin Room',
-        'totalRate': 278
+        'totalRate': 278,
+        'price': 278
       }
     ]
   },
@@ -468,6 +488,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Landlust, Amsterdam',
     'reviewCount': 2127,
+    'distance': 2127,
     'guestVote': 7.4,
     'images': [
       {
@@ -632,7 +653,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Or Twin',
-        'totalRate': 113
+        'totalRate': 113,
+
+        'price': 113
       },
       {
         'hasFreeCancelation': true,
@@ -646,7 +669,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Double Or Twin Room   Free Wi Fi',
-        'totalRate': 124
+        'totalRate': 124,
+
+        'price': 124
       },
       {
         'hasFreeCancelation': true,
@@ -660,7 +685,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Deluxe Kamer, 2 Eenpersoonsbedden, Niet Roken   Flexible Rate',
-        'totalRate': 124
+        'totalRate': 124,
+
+        'price': 124
       },
       {
         'hasFreeCancelation': true,
@@ -674,7 +701,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Deluxe Room, 2 Single Beds, Non Smoking   Flexible Rate',
-        'totalRate': 124
+        'totalRate': 124,
+        'price': 124
       },
       {
         'hasFreeCancelation': true,
@@ -688,7 +716,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Twin Room (I)',
-        'totalRate': 130
+        'totalRate': 130,
+        'price': 130
       }
     ]
   },
@@ -697,6 +726,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Westlandgracht, Amsterdam',
     'reviewCount': 3029,
+    'distance': 3029,
     'guestVote': 9,
     'images': [
       {
@@ -861,7 +891,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Double Or Twin Room   Free Wi Fi',
-        'totalRate': 124
+        'totalRate': 124,
+        'price': 124
       },
       {
         'hasFreeCancelation': true,
@@ -875,7 +906,8 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Standaard Kamer, 2 Eenpersoonsbedden, Niet Roken   Flexible Rate',
-        'totalRate': 124
+        'totalRate': 124,
+        'price': 124
       },
       {
         'hasFreeCancelation': false,
@@ -889,7 +921,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Or Twin',
-        'totalRate': 119
+        'totalRate': 119,
+        'price': 119
       },
       {
         'hasFreeCancelation': true,
@@ -903,7 +936,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Room, 2 Single Beds, Non Smoking   Flexible Rate',
-        'totalRate': 124
+        'totalRate': 124,
+        'price': 124
       },
       {
         'hasFreeCancelation': true,
@@ -917,7 +951,8 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Double   Room Only',
-        'totalRate': 150
+        'totalRate': 150,
+        'price': 150
       }
     ]
   },
@@ -926,6 +961,7 @@ export default [
     'starRating': 3,
     'placeShort': 'Museumkwartier, Amsterdam',
     'reviewCount': 1755,
+    'distance': 1755,
     'guestVote': 7.7,
     'images': [
       {
@@ -1090,7 +1126,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In 8 Bed Mixed Dormitory   Free Wi Fi',
-        'totalRate': 87
+        'totalRate': 87,
+
+        'price': 87
       },
       {
         'hasFreeCancelation': true,
@@ -1104,7 +1142,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In 6 Bed Female Dormitory   Free Wi Fi',
-        'totalRate': 96
+        'totalRate': 96,
+
+        'price': 96
       },
       {
         'hasFreeCancelation': null,
@@ -1118,7 +1158,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In Shared Dorm',
-        'totalRate': 93
+        'totalRate': 93,
+
+        'price': 93
       },
       {
         'hasFreeCancelation': true,
@@ -1132,7 +1174,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Twin Room   Free Wi Fi',
-        'totalRate': 176
+        'totalRate': 176,
+
+        'price': 176
       },
       {
         'hasFreeCancelation': true,
@@ -1146,7 +1190,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Double Room',
-        'totalRate': 177
+        'totalRate': 177,
+
+        'price': 177
       }
     ]
   },
@@ -1155,6 +1201,7 @@ export default [
     'starRating': 0,
     'placeShort': 'Buiksloterham, Amsterdam',
     'reviewCount': 243,
+    'distance': 243,
     'guestVote': 8.3,
     'images': [
       {
@@ -1319,7 +1366,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In 10 Bed Mixed Dormitory Room   Non Refundable   Free Wi Fi',
-        'totalRate': 74
+        'totalRate': 74,
+
+        'price': 74
       },
       {
         'hasFreeCancelation': false,
@@ -1333,7 +1382,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In 10 Bed Female Dormitory Room With Private Bathroom   Non Refundable   Free Wi Fi',
-        'totalRate': 81
+        'totalRate': 81,
+
+        'price': 81
       },
       {
         'hasFreeCancelation': false,
@@ -1347,7 +1398,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In 10 Bed Standard Mixed Dormitory   Free Wi Fi',
-        'totalRate': 74
+        'totalRate': 74,
+
+        'price': 74
       },
       {
         'hasFreeCancelation': false,
@@ -1361,7 +1414,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Bed In 6 Bed Dormitory Room With Private Bathroom    Non Refundable   Free Wi Fi',
-        'totalRate': 86
+        'totalRate': 86,
+
+        'price': 86
       },
       {
         'hasFreeCancelation': false,
@@ -1375,7 +1430,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Standaard Tweepersoonskamer, Privébadkamer',
-        'totalRate': 130
+        'totalRate': 130,
+
+        'price': 130
       }
     ]
   },
@@ -1384,6 +1441,7 @@ export default [
     'starRating': 5,
     'placeShort': 'Burgwallen-Oude Zijde, Amsterdam',
     'reviewCount': 9997,
+    'distance': 9997,
     'guestVote': 8,
     'images': [
       {
@@ -1548,7 +1606,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Double Or Twin Room   Non Refundable   Free Wi Fi',
-        'totalRate': 275
+        'totalRate': 275,
+
+        'price': 275
       },
       {
         'hasFreeCancelation': false,
@@ -1562,7 +1622,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Superior Kamer',
-        'totalRate': 276
+        'totalRate': 276,
+
+        'price': 276
       },
       {
         'hasFreeCancelation': false,
@@ -1576,7 +1638,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Room',
-        'totalRate': 276
+        'totalRate': 276,
+
+        'price': 276
       },
       {
         'hasFreeCancelation': false,
@@ -1590,7 +1654,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Room Superior',
-        'totalRate': 278
+        'totalRate': 278,
+
+        'price': 278
       },
       {
         'hasFreeCancelation': false,
@@ -1604,7 +1670,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Superior',
-        'totalRate': 298
+        'totalRate': 298,
+
+        'price': 298
       }
     ]
   },
@@ -1613,6 +1681,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Burgwallen-Nieuwe Zijde, Amsterdam',
     'reviewCount': 10281,
+    'distance': 10281,
     'guestVote': 7.9,
     'images': [
       {
@@ -1777,7 +1846,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Room   Non Refundable   Free Wi Fi',
-        'totalRate': 234
+        'totalRate': 234,
+
+        'price': 234
       },
       {
         'hasFreeCancelation': false,
@@ -1791,7 +1862,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Superior Kamer, 1 Queensize Bed',
-        'totalRate': 235
+        'totalRate': 235,
+
+        'price': 235
       },
       {
         'hasFreeCancelation': false,
@@ -1805,7 +1878,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Room, 1 Queen Bed',
-        'totalRate': 235
+        'totalRate': 235,
+
+        'price': 235
       },
       {
         'hasFreeCancelation': false,
@@ -1819,7 +1894,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Room   Advanced Purchase 5   Free Wi Fi Access',
-        'totalRate': 234
+        'totalRate': 234,
+
+        'price': 234
       },
       {
         'hasFreeCancelation': false,
@@ -1833,7 +1910,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Superior Queen Bed Room Only',
-        'totalRate': 301
+        'totalRate': 301,
+
+        'price': 301
       }
     ]
   },
@@ -1842,6 +1921,7 @@ export default [
     'starRating': 5,
     'placeShort': 'Nieuwmarkt en Lastage, Amsterdam',
     'reviewCount': 12003,
+    'distance': 12003,
     'guestVote': 8.8,
     'images': [
       {
@@ -2006,7 +2086,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Room Deluxe',
-        'totalRate': 189
+        'totalRate': 189,
+
+        'price': 189
       },
       {
         'hasFreeCancelation': false,
@@ -2020,7 +2102,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Deluxe',
-        'totalRate': 195
+        'totalRate': 195,
+
+        'price': 195
       },
       {
         'hasFreeCancelation': null,
@@ -2034,7 +2118,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Deluxe',
-        'totalRate': 198
+        'totalRate': 198,
+
+        'price': 198
       },
       {
         'hasFreeCancelation': false,
@@ -2048,7 +2134,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior',
-        'totalRate': 223
+        'totalRate': 223,
+
+        'price': 223
       },
       {
         'hasFreeCancelation': true,
@@ -2062,7 +2150,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Deluxe Room Sleeps 2',
-        'totalRate': 519
+        'totalRate': 519,
+
+        'price': 519
       }
     ]
   },
@@ -2071,6 +2161,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Oostelijk Havengebied, Amsterdam',
     'reviewCount': 10281,
+    'distance': 10281,
     'guestVote': 9,
     'images': [
       {
@@ -2235,7 +2326,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Classic Double Room   Non Refundable   Free Wi Fi',
-        'totalRate': 183
+        'totalRate': 183,
+
+        'price': 183
       },
       {
         'hasFreeCancelation': false,
@@ -2249,7 +2342,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Classic King Room   Special Offer 7   Free Wi Fi Access',
-        'totalRate': 192
+        'totalRate': 192,
+
+        'price': 192
       },
       {
         'hasFreeCancelation': false,
@@ -2263,7 +2358,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Double Room   Non Refundable   Free Wi Fi',
-        'totalRate': 208
+        'totalRate': 208,
+
+        'price': 208
       },
       {
         'hasFreeCancelation': false,
@@ -2277,7 +2374,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Superior Twin Room With City View   Non Refundable   Free Wi Fi',
-        'totalRate': 253
+        'totalRate': 253,
+
+        'price': 253
       },
       {
         'hasFreeCancelation': false,
@@ -2291,7 +2390,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Non Refundable Leisure',
-        'totalRate': 244
+        'totalRate': 244,
+
+        'price': 244
       }
     ]
   },
@@ -2300,6 +2401,7 @@ export default [
     'starRating': 3,
     'placeShort': 'Frankendael, Amsterdam',
     'reviewCount': 5214,
+    'distance': 5214,
     'guestVote': 8.4,
     'images': [
       {
@@ -2464,7 +2566,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Twin Room   Non Refundable   Free Wi Fi',
-        'totalRate': 135
+        'totalRate': 135,
+
+        'price': 135
       },
       {
         'hasFreeCancelation': false,
@@ -2478,7 +2582,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Standaard Kamer, 2 Eenpersoonsbedden',
-        'totalRate': 136
+        'totalRate': 136,
+
+        'price': 136
       },
       {
         'hasFreeCancelation': false,
@@ -2492,7 +2598,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Or Twin',
-        'totalRate': 130
+        'totalRate': 130,
+
+        'price': 130
       },
       {
         'hasFreeCancelation': false,
@@ -2506,7 +2614,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Twin Room Non Refundable   Best Price Guarantee',
-        'totalRate': 129
+        'totalRate': 129,
+
+        'price': 129
       },
       {
         'hasFreeCancelation': false,
@@ -2520,7 +2630,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Standard',
-        'totalRate': 148
+        'totalRate': 148,
+
+        'price': 148
       }
     ]
   },
@@ -2529,6 +2641,7 @@ export default [
     'starRating': 3,
     'placeShort': 'Grachtengordel-Zuid, Amsterdam',
     'reviewCount': 7887,
+    'distance': 7887,
     'guestVote': 7.4,
     'images': [
       {
@@ -2695,7 +2808,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Standard',
-        'totalRate': 202
+        'totalRate': 202,
+
+        'price': 202
       },
       {
         'hasFreeCancelation': false,
@@ -2709,7 +2824,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Double Or Twin Room   Non Refundable   Free Wi Fi',
-        'totalRate': 226
+        'totalRate': 226,
+
+        'price': 226
       },
       {
         'hasFreeCancelation': false,
@@ -2723,7 +2840,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Standaard Kamer, 1 Tweepersoonsbed Of 2 Eenpersoonsbedden',
-        'totalRate': 226
+        'totalRate': 226,
+
+        'price': 226
       },
       {
         'hasFreeCancelation': false,
@@ -2737,7 +2856,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Room, 1 Double Or 2 Single Beds',
-        'totalRate': 226
+        'totalRate': 226,
+
+        'price': 226
       }
     ]
   },
@@ -2746,6 +2867,7 @@ export default [
     'starRating': 2,
     'placeShort': 'Amsterdam',
     'reviewCount': 3548,
+    'distance': 3548,
     'guestVote': 7.1,
     'images': [
       {
@@ -2910,7 +3032,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Triple Room (2 Adults)   Free Wi Fi',
-        'totalRate': 51
+        'totalRate': 51,
+
+        'price': 51
       },
       {
         'hasFreeCancelation': null,
@@ -2924,7 +3048,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Triple Room With Double Bed And Bunk Bed',
-        'totalRate': 51
+        'totalRate': 51,
+
+        'price': 51
       },
       {
         'hasFreeCancelation': true,
@@ -2938,7 +3064,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Standaard Driepersoonskamer, 1 Tweepersoonsbed',
-        'totalRate': 51
+        'totalRate': 51,
+
+        'price': 51
       },
       {
         'hasFreeCancelation': true,
@@ -2952,7 +3080,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Triple Room, 1 Double Bed',
-        'totalRate': 51
+        'totalRate': 51,
+
+        'price': 51
       }
     ]
   },
@@ -2961,6 +3091,7 @@ export default [
     'starRating': 3,
     'placeShort': 'Museumkwartier, Amsterdam',
     'reviewCount': 6738,
+    'distance': 6738,
     'guestVote': 7.3,
     'images': [
       {
@@ -3125,7 +3256,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Or Twin Room   Non Refundable   Free Wi Fi',
-        'totalRate': 176
+        'totalRate': 176,
+
+        'price': 176
       },
       {
         'hasFreeCancelation': false,
@@ -3139,7 +3272,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Standaard Kamer, 2 Eenpersoonsbedden, Niet Roken   Internet Special',
-        'totalRate': 177
+        'totalRate': 177,
+
+        'price': 177
       },
       {
         'hasFreeCancelation': true,
@@ -3153,7 +3288,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Or Twin Room   Free Wi Fi',
-        'totalRate': 187
+        'totalRate': 187,
+
+        'price': 187
       },
       {
         'hasFreeCancelation': false,
@@ -3167,7 +3304,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Standard Room, 1 Double Bed, Non Smoking   Internet Special',
-        'totalRate': 177
+        'totalRate': 177,
+
+        'price': 177
       },
       {
         'hasFreeCancelation': false,
@@ -3181,7 +3320,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Nonrefundable Standard Double Or Twin   Room Only',
-        'totalRate': 181
+        'totalRate': 181,
+
+        'price': 181
       }
     ]
   },
@@ -3190,6 +3331,7 @@ export default [
     'starRating': 4,
     'placeShort': 'Station-Zuid WTC, Amsterdam',
     'reviewCount': 5224,
+    'distance': 5224,
     'guestVote': 9,
     'images': [
       {
@@ -3354,7 +3496,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Room   Non Refundable   Free Wi Fi',
-        'totalRate': 131
+        'totalRate': 131,
+
+        'price': 131
       },
       {
         'hasFreeCancelation': false,
@@ -3368,7 +3512,9 @@ export default [
           'isLanguageSupported': false
         },
         'roomName': 'Deluxe Kamer',
-        'totalRate': 131
+        'totalRate': 131,
+
+        'price': 131
       },
       {
         'hasFreeCancelation': false,
@@ -3382,7 +3528,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Deluxe Room',
-        'totalRate': 131
+        'totalRate': 131,
+
+        'price': 131
       },
       {
         'hasFreeCancelation': true,
@@ -3396,7 +3544,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Double Room   Free Wi Fi',
-        'totalRate': 145
+        'totalRate': 145,
+
+        'price': 145
       },
       {
         'hasFreeCancelation': false,
@@ -3410,7 +3560,9 @@ export default [
           'isLanguageSupported': true
         },
         'roomName': 'Deluxe Room',
-        'totalRate': 132
+        'totalRate': 132,
+
+        'price': 132
       }
     ]
   }

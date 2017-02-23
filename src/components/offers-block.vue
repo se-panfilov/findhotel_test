@@ -3,11 +3,11 @@
     <section class="offers-block__best-offer">
       <div class="offers-block__old-price">
         <i class="fa fa-euro offers-block__currency-char"></i>
-        <span class="offers-block__val" v-text="bestOffer.totalRate"></span>
+        <span class="offers-block__val" v-text="bestOffer.price"></span>
       </div>
       <div class="offers-block__price">
         <i class="fa fa-euro offers-block__currency-char"></i>
-        <span class="offers-block__val" v-text="getDiscountPrice(bestOffer.totalRate)"></span>
+        <span class="offers-block__val" v-text="getDiscountPrice(bestOffer.price)"></span>
       </div>
       <div class="offers-block__free-cancellation" v-if="bestOffer.hasFreeCancelation">Free cancellation</div>
       <div class="offers-block__btn-container">
@@ -20,7 +20,7 @@
           <span class="offers-block__link-txt" v-text="item.provider.name"></span>
           <span class="offers-block__link-txt -right">
             <i class="fa fa-euro"></i>
-            <span v-text="item.totalRate"></span>
+            <span v-text="item.price"></span>
           </span>
         </a>
       </li>

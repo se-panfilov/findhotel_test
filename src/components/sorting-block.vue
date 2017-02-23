@@ -46,6 +46,12 @@
         sortingModel: null
       }
     },
+    props: {
+      total: {
+        type: Number,
+        default: 0
+      }
+    },
     mounted () {
       const types = this.getSortingTypes()
       this.sortingTypes.push({label: 'By name', value: types.name.name, type: types.name.type})
@@ -68,9 +74,9 @@
     },
     computed: {
       hotelsCount () {
-        const list = this.getItemsList()
-        if (list) return list.length
-        return 0
+//        const list = this.getItemsList()
+//        if (list) return list.length
+        return this.total
       },
       greatDealsCount () {
         const list = this.getItemsList()
