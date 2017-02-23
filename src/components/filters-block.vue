@@ -69,9 +69,5 @@
     &__range
       flex 1
       min-height 200px
-      background-color deeppink
-      &:first-of-type
-        background-color orange
-      &:last-of-type
-        background-color aqua
+      padding 15px
 </style>
