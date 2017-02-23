@@ -3,11 +3,11 @@
     <section class="offers-block__best-offer">
       <div class="offers-block__old-price">
         <i class="fa fa-euro offers-block__currency-char"></i>
-        <span class="offers-block__val" v-text="bestOffer.price"></span>
+        <span class="offers-block__val" v-text="getOldPrice(bestOffer.price)"></span>
       </div>
       <div class="offers-block__price">
         <i class="fa fa-euro offers-block__currency-char"></i>
-        <span class="offers-block__val" v-text="getDiscountPrice(bestOffer.price)"></span>
+        <span class="offers-block__val" v-text="bestOffer.price"></span>
       </div>
       <div class="offers-block__free-cancellation" v-if="bestOffer.hasFreeCancelation">Free cancellation</div>
       <div class="offers-block__btn-container">
@@ -42,8 +42,8 @@
       }
     },
     methods: {
-      getDiscountPrice (price) {
-        return Math.floor(price / 100 * 90) // why not?
+      getOldPrice (price) {
+        return price + Math.floor(price / 100 * 10) // why not?
       }
     },
     computed: {

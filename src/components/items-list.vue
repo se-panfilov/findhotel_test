@@ -81,7 +81,6 @@
           const isRatingOk = (+v.guestVote >= minRating) || (minRating === 0)
           const isDistanceOk = (+v.distance <= distance) || (distance === 0)
 
-          console.info(`bestOffer.price: ${bestOffer.price}, maxPrice: ${maxPrice}, bestOffer.price <= maxPrice: ${bestOffer.price <= maxPrice}`)
           return isPriceOk && isRatingOk && isDistanceOk
         })
 
