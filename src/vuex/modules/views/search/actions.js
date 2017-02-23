@@ -18,6 +18,9 @@ const actions = {
   },
   [TYPES.STATE.ITEM_LIKE.SET]: ({commit}, {item, isLike}) => {
     commit(TYPES.STATE.ITEM_LIKE.SET, {item, isLike})
+  },
+  [TYPES.STATE.SORTING.SET]: ({commit}, sorting) => {
+    commit(TYPES.STATE.SORTING.SET, sorting)
   }
 }
 

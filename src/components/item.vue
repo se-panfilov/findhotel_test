@@ -10,7 +10,6 @@
             </button>
           </div>
         </div>
-        <!--<img :src="item.images[0].small" :alt="item.name" class="item__img"/>-->
       </section>
       <section class="item__block -center">
         <div class="item__vertical-container">
@@ -134,8 +133,10 @@
 
     &__vertical-block
       flex 1
-      flex-basis 70px
-      padding 15px
+      flex-basis 82px
+      padding 5px 15px
+      &:last-of-type
+        padding-top 25px
 
     &__image
       background-repeat no-repeat
@@ -147,6 +148,8 @@
     &__name
       font-size 1.2em
       font-weight 500
+      margin-top 0
+      margin-bottom 10px
 
     &__distance
       padding 5px 0

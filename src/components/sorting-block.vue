@@ -5,8 +5,14 @@
         <span class="input-block__text">Sort by</span>
         <select name="sorting"
                 class="input-block__input -select"
+                v-model="sortingModel"
+                @change="onChange"
         >
-          <option value="suppliesAndPrice" class="input-block__option" selected>Best supplies and price</option>
+          <option class="input-block__option"
+                  v-for="type in sortingTypes"
+                  v-text="type.label"
+                  v-bind:value="type"
+          ></option>
         </select>
       </label>
 
@@ -26,6 +32,7 @@
 
 <script>
   import {
+    mapActions,
     mapGetters
   } from 'vuex'
 
@@ -34,11 +41,30 @@
   export default {
     name: 'SortingBlock',
     data () {
-      return {}
+      return {
+        sortingTypes: [],
+        sortingModel: null
+      }
+    },
+    mounted () {
+      const types = this.getSortingTypes()
+      this.sortingTypes.push({label: 'By name', value: types.name})
+      this.sortingTypes.push({label: 'Best supplies and price', value: types.best})
+
+      this.sortingModel = this.sortingTypes.filter(v => v.value === this.getSorting())[0]
+      console.info(this.sortingModel)
     },
     methods: {
+      onChange () {
+        this.setSorting(this.sortingModel.value)
+      },
+      ...mapActions({
+        setSorting: searchVuex.types.STATE.SORTING.SET
+      }),
       ...mapGetters({
-        getItemsList: searchVuex.types.STATE.LIST.GET
+        getItemsList: searchVuex.types.STATE.LIST.GET,
+        getSortingTypes: searchVuex.types.STATE.SORTING_TYPES.GET,
+        getSorting: searchVuex.types.STATE.SORTING.GET
       })
     },
     computed: {

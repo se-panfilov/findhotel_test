@@ -2,24 +2,33 @@ import types from './types'
 import actions from './actions'
 import getters from './getters'
 
+const SORTING_TYPES = {
+  best: 'best',
+  name: 'name'
+}
+
 const state = {
   current: {
-    maxPrice: 0,
-    minRating: 0,
-    distance: 0,
+    filters: {
+      maxPrice: 0,
+      minRating: 0,
+      distance: 0
+    },
+    sorting: SORTING_TYPES.best,
+    sortingTypes: SORTING_TYPES,
     list: []
   }
 }
 
 const mutations = {
   [types.STATE.MAX_PRICE.SET] (state, price) {
-    state.current.maxPrice = price
+    state.current.filters.maxPrice = price
   },
   [types.STATE.MIN_RATING.SET] (state, rating) {
-    state.current.minRating = rating
+    state.current.filters.minRating = rating
   },
   [types.STATE.DISTANCE.SET] (state, distance) {
-    state.current.distance = distance
+    state.current.filters.distance = distance
   },
   [types.STATE.LIST.SET] (state, list) {
     state.current.list = [...list]
@@ -32,6 +41,10 @@ const mutations = {
     state.current.list[index].isLike = !!isLike
     // Bad practice, cause 'JSON.parse' can affect dates
     state.current.list = JSON.parse(JSON.stringify(state.current.list))
+  },
+  [types.STATE.SORTING.SET] (state, sorting) {
+    if (!SORTING_TYPES[sorting]) throw new Error('Invalid sorting type')
+    state.current.sorting = sorting
   }
 }
 
