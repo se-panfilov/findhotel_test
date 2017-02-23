@@ -1,28 +1,46 @@
 <template>
   <section class="item">
     <div class="item__container">
-      <section class="item__block -left -relative">
+      <section class="item__block item__image -left -relative" :style="bgImg">
         <div class="item__img-buttons">
           <div class="item__label -left great-offer">Great Offer</div>
           <div class="item__label -right">Like</div>
         </div>
-        <img :src="item.images[0].small" :alt="item.name" class="item__img"/>
+        <!--<img :src="item.images[0].small" :alt="item.name" class="item__img"/>-->
       </section>
       <section class="item__block -center">
-        <h3 class="item__name" v-text="item.name"></h3>
-        <div class="item__rating">
-          <star-rating :rating="item.starRating"></star-rating>
+        <div class="item__vertical-container">
+          <div class="item__vertical-block">
+            <h3 class="item__name" v-text="item.name"></h3>
+            <div class="item__rating">
+              <star-rating :rating="item.starRating"></star-rating>
+            </div>
+          </div>
+          <div class="item__vertical-block">
+            <div class="item__distance">
+              <i class="fa fa-location-arrow"></i>
+              <span>120m form city center</span>
+            </div>
+            <div class="item__quality">
+              <guest-vote :rating="item.guestVote"></guest-vote>
+            </div>
+          </div>
+          <div class="item__vertical-block">
+            <div class="item__tags">
+              <span class="item__tag">Central location</span>
+              <span class="item__tag">Very clean</span>
+              <span class="item__tag">Canal view</span>
+            </div>
+          </div>
         </div>
-        <div class="item__distance" v-text="item.distance"></div>
-        <div class="item__quality">
-          <guest-vote :rating="item.guestVote"></guest-vote>
-        </div>
-        <div class="item__tags"></div>
       </section>
       <section class="item__block -right">
         <offers-block :offers="item.offers"></offers-block>
         <div class="-centered">
-          <button class="item__btn -link -small">Show details</button>
+          <button class="item__btn -link -small">
+            Show details
+            <i class="fa fa-chevron-down"></i>
+          </button>
         </div>
       </section>
     </div>
@@ -46,6 +64,11 @@
       }
     },
     methods: {},
+    computed: {
+      bgImg () {
+        return `background-image:url(${this.item.images[0].large})`
+      }
+    },
     components: {
       StarRating,
       GuestVote,
@@ -59,6 +82,7 @@
 
   .item
     background-color white
+    border-radius 3px
 
     &__container
       display flex
@@ -66,34 +90,60 @@
       flex-direction row
 
     &__block
-      //display flex
       flex-basis 200px
       flex-grow 1
-      //background-color red
-      //&.-relative
-      //  position relative
+      border 1px solid transparent
       &.-left
-        background-color red
+        border-right-color #f2f2f2
       &.-center
-        background-color green
         flex-grow 3
       &.-right
-        border 1px solid transparent
-        border-left-color black
-        // background-color blue
+        border-left-color #f2f2f2
 
     &__img
       z-index 4
 
     &__img-buttons
-    //position absolute
       left: 0
       right 0
       top 0
       z-index 5
 
+    &__distance
+      color main_color
+
+    &__vertical-container
+      display flex
+      flex-direction column
+      justify-content space-around
+
+    &__vertical-block
+      flex 1
+      flex-basis 70px
+      padding 15px
+
+    &__image
+      background-repeat no-repeat
+      background-position center
+      background-size 100% 100%
+
+    &__name
+      font-size 1.2em
+      font-weight 500
+
+    &__distance
+      padding 5px 0
+
+    &__tag
+      margin 5px
+      padding 10px
+      display inline-block
+      background-color #f2f2f2
+      border 1px solid #f2f2f2
+      border-radius 25px
+      font-size 0.9em
+
     &__label
-    //position absolute
       font-size 0.7em
       z-index 6
       &.-left
