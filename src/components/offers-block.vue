@@ -3,11 +3,11 @@
     <section class="offers-block__best-offer">
       <div class="offers-block__old-price">
         <i class="fa fa-euro offers-block__currency-char"></i>
-        <span class="offers-block__val">100</span>
+        <span class="offers-block__val" v-text="bestOffer.totalRate"></span>
       </div>
       <div class="offers-block__price">
         <i class="fa fa-euro offers-block__currency-char"></i>
-        <span class="offers-block__val">100</span>
+        <span class="offers-block__val" v-text="getDiscountPrice(bestOffer.totalRate)"></span>
       </div>
       <div class="offers-block__free-cancellation" v-if="bestOffer.hasFreeCancelation">Free cancellation</div>
       <div class="offers-block__btn-container">
@@ -18,7 +18,10 @@
       <li class="offers-block__provider" v-for="item in topThreeOffers">
         <a href="#" class="offers-block__link">
           <span class="offers-block__link-txt" v-text="item.provider.name"></span>
-          <span class="offers-block__link-txt -right">€100</span>
+          <span class="offers-block__link-txt -right">
+            <i class="fa fa-euro"></i>
+            <span v-text="item.totalRate"></span>
+          </span>
         </a>
       </li>
     </ul>
@@ -38,7 +41,11 @@
         required: true
       }
     },
-    methods: {},
+    methods: {
+      getDiscountPrice (price) {
+        return Math.floor(price / 100 * 90) // why not?
+      }
+    },
     computed: {
       bestOffer () {
         return this.offers.filter(v => v.isBest)[0]
@@ -61,7 +68,6 @@
     &__btn-container
       margin 10px
 
-    //buttons
     &__btn
       cursor pointer
       border-radius 25px
@@ -74,7 +80,7 @@
         background-color secondary_color
         border 1px solid secondary_color
         &:hover
-          background-color lighten(secondary_color,  5)
+          background-color lighten(secondary_color, 5)
       &.-big
         width 100%
         padding 15px
@@ -95,12 +101,10 @@
       font-size 3em
       color black
 
-    //list
     &__providers-list
       list-style none
       padding 10px
 
-    //links
     &__link
       text-decoration none
       color main_txt_color
@@ -109,7 +113,7 @@
     &__link-txt
       color main_txt_color
       &:hover
-        color darken(main_txt_color,  15)
+        color darken(main_txt_color, 15)
       &.-right
         float right
 </style>

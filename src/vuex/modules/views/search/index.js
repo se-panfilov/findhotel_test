@@ -3,8 +3,14 @@ import actions from './actions'
 import getters from './getters'
 
 const SORTING_TYPES = {
-  best: 'best',
-  name: 'name'
+  price: {
+    name: 'price',
+    type: 'number'
+  },
+  name: {
+    name: 'name',
+    type: 'string'
+  }
 }
 
 const state = {
@@ -14,7 +20,7 @@ const state = {
       minRating: 0,
       distance: 0
     },
-    sorting: SORTING_TYPES.best,
+    sorting: SORTING_TYPES.price,
     sortingTypes: SORTING_TYPES,
     list: []
   }
@@ -44,7 +50,7 @@ const mutations = {
   },
   [types.STATE.SORTING.SET] (state, sorting) {
     if (!SORTING_TYPES[sorting]) throw new Error('Invalid sorting type')
-    state.current.sorting = sorting
+    state.current.sorting = Object.assign({}, SORTING_TYPES[sorting])
   }
 }
 

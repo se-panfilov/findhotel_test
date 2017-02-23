@@ -48,11 +48,10 @@
     },
     mounted () {
       const types = this.getSortingTypes()
-      this.sortingTypes.push({label: 'By name', value: types.name})
-      this.sortingTypes.push({label: 'Best supplies and price', value: types.best})
+      this.sortingTypes.push({label: 'By name', value: types.name.name, type: types.name.type})
+      this.sortingTypes.push({label: 'By price', value: types.price.name, type: types.price.type})
 
-      this.sortingModel = this.sortingTypes.filter(v => v.value === this.getSorting())[0]
-      console.info(this.sortingModel)
+      this.sortingModel = this.sortingTypes.filter(v => v.value === this.getSorting().name)[0]
     },
     methods: {
       onChange () {
@@ -114,4 +113,5 @@
       background-color #fff
       border 1px solid transparent
       border-radius 4px
+      min-width 150px
 </style>
