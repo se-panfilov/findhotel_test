@@ -121,7 +121,7 @@
       z-index 5
       display flex
       justify-content space-between
-      padding 5px
+      padding 5px 0
       color white
 
     &__distance
@@ -169,11 +169,13 @@
       z-index 6
       &.-great-offer
         height 19px
+        padding 0 5px
+        margin 5px 0
         color white
         position relative
         background secondary_color
         border 1px solid secondary_color
-        &:after, &:before
+        &:before
           left 100%
           top 50%
           border solid transparent
@@ -182,11 +184,7 @@
           width 0
           position absolute
           pointer-events none
-        &:after
-          border-color transparent
-          border-left-color secondary_color
-          border-width 5px
-          margin-top -5px
+
         &:before
           border-color transparent
           border-left-color secondary_color
