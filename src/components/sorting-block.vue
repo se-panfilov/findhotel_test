@@ -9,6 +9,7 @@
                 @change="onChange"
         >
           <option class="input-block__option"
+                  :id="'input-block-option__' + type.value"
                   v-for="type in sortingTypes"
                   v-text="type.label"
                   v-bind:value="type"
