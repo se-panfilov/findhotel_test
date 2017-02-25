@@ -9,9 +9,6 @@
   import MainHeader from './components/main-header'
   import SearchPage from './views/search'
 
-  // TODO (S.Panfilov) font-awesome
-  // TODO (S.Panfilov) roboto
-
   export default {
     name: 'app',
     components: {
